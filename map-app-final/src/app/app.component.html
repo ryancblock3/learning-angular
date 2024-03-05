@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="col-8">
+    <app-map
+      (countryIdSelect)="selectedCountryId = $event"
+      (countryNameSelect)="selectedCountryName = $event.toString()"
+      (countryCapitalSelect)="selectedCountryCapital = $event"
+      (countryRegionSelect)="selectedCountryRegion = $event"
+      (countryIncomeLevelSelect)="selectedCountryIncomeLevel = $event.toString()"
+      (countryLatitudeSelect)="selectedCountryLatitude = $event"
+      (countryLongitudeSelect)="selectedCountryLongitude = $event"
+    ></app-map>
+  </div>
+  <div class="col-4">
+    <app-info
+      [countryId]="selectedCountryId"
+      [countryName]="selectedCountryName"
+      [countryCapital]="selectedCountryCapital"
+      [countryRegion]="selectedCountryRegion"
+      [countryIncomeLevel]="selectedCountryIncomeLevel"
+      [countryLatitude]="selectedCountryLatitude"
+      [countryLongitude]="selectedCountryLongitude"
+    ></app-info>
+  </div>
+</div>
